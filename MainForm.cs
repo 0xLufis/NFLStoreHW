@@ -8,26 +8,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using S0IPAF.DataModel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace S0IPAF
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        private string SourceDataFilePath;
-        private void SetSourceDataFilePath(string FName)
-        {
-            this.SourceDataFilePath = FName;
-        }
+        private ItemStore store = new ItemStore();
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void fájlBetöltéseToolStripMenuItem_Click(object sender, EventArgs e)
@@ -37,10 +29,24 @@ namespace S0IPAF
             if (openFileDialog1.ShowDialog() != DialogResult.OK) return;
         }
 
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        private void OpenFileDialogLoadData_FileOk(object sender, CancelEventArgs e)
         {
-            SetSourceDataFilePath(openFileDialog1.FileName);
+            ParseTextData parser = new ParseTextData();
+            store.LoadData(openFileDialog1.FileName, parser);
+            MessageBox.Show(store.ToString());
             Application.DoEvents();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OrderFormButton_Click(object sender, EventArgs e)
+        {
+            OrderForm orderForm = new OrderForm(store);
+            orderForm.Show();
+
         }
     }
 }
