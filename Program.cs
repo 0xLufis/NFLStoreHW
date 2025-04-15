@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using S0IPAF.DataModel;
+using S0IPAF.Model;
 
 namespace S0IPAF
 {

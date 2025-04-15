@@ -46,34 +46,59 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataModel\ItemStore.cs" />
-    <Compile Include="ItemControl.cs">
+    <Compile Include="Model\Accounting\Accounting.cs" />
+    <Compile Include="Model\Accounting\SaleItem.cs" />
+    <Compile Include="Model\Jersey\IJerseyParser.cs" />
+    <Compile Include="Model\Jersey\TxtJerseyParser.cs" />
+    <Compile Include="View\JerseyControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ItemControl.Designer.cs">
-      <DependentUpon>ItemControl.cs</DependentUpon>
+    <Compile Include="View\JerseyControl.Designer.cs">
+      <DependentUpon>JerseyControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="View\Konyveles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="View\Konyveles.Designer.cs">
+      <DependentUpon>Konyveles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataModel\IParseData.cs" />
-    <Compile Include="DataModel\Item.cs" />
-    <Compile Include="DataModel\ParseTextData.cs" />
-    <Compile Include="OrderForm.cs">
+    <Compile Include="Util\IParser.cs" />
+    <Compile Include="Model\Jersey\Jersey.cs" />
+    <Compile Include="Model\Jersey\JerseyStorage.cs" />
+    <Compile Include="Model\Jersey\JerseyStorageEnumerator.cs" />
+    <Compile Include="View\Nevjegy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OrderForm.Designer.cs">
+    <Compile Include="View\Nevjegy.Designer.cs">
+      <DependentUpon>Nevjegy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\OrderForm.Designer.cs">
       <DependentUpon>OrderForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="View\JerseyControl.resx">
+      <DependentUpon>JerseyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Konyveles.resx">
+      <DependentUpon>Konyveles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrderForm.resx">
+    <EmbeddedResource Include="View\Nevjegy.resx">
+      <DependentUpon>Nevjegy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrderForm.resx">
       <DependentUpon>OrderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using S0IPAF.DataModel; 
 
-namespace S0IPAF.DataModel
+namespace S0IPAF.Model.Util
 {
-    interface IParseData
+    public interface IParser<T>
     {
-        List<Item> ParseData(string sourceDataFilePath);
+        List<T> Parse(string[] lines);
     }
 }

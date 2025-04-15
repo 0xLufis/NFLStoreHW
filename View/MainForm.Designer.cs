@@ -63,6 +63,7 @@
             // 
             // reToolStripMenuItem
             // 
+            this.reToolStripMenuItem.Enabled = false;
             this.reToolStripMenuItem.Name = "reToolStripMenuItem";
             this.reToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
             this.reToolStripMenuItem.Text = "Rendelés...";
@@ -73,18 +74,21 @@
             this.kömyvelésToolStripMenuItem.Name = "kömyvelésToolStripMenuItem";
             this.kömyvelésToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.kömyvelésToolStripMenuItem.Text = "Könyvelés..";
+            this.kömyvelésToolStripMenuItem.Click += new System.EventHandler(this.kömyvelésToolStripMenuItem_Click);
             // 
             // névjegyToolStripMenuItem
             // 
             this.névjegyToolStripMenuItem.Name = "névjegyToolStripMenuItem";
             this.névjegyToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.névjegyToolStripMenuItem.Text = "Névjegy...";
+            this.névjegyToolStripMenuItem.Click += new System.EventHandler(this.névjegyToolStripMenuItem_Click);
             // 
             // kilépésToolStripMenuItem
             // 
             this.kilépésToolStripMenuItem.Name = "kilépésToolStripMenuItem";
             this.kilépésToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.kilépésToolStripMenuItem.Text = "Kilépés";
+            this.kilépésToolStripMenuItem.Click += new System.EventHandler(this.kilépésToolStripMenuItem_Click);
             // 
             // openFileDialog1
             // 
