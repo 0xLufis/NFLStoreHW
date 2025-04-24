@@ -130,7 +130,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.labelPlayerNumber);
             this.Controls.Add(this.checkBoxBuy);
             this.Controls.Add(this.labelCount);
@@ -143,7 +142,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "JerseyControl";
             this.Padding = new System.Windows.Forms.Padding(10);
-            this.Size = new System.Drawing.Size(663, 78);
+            this.Size = new System.Drawing.Size(665, 80);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxJersey)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

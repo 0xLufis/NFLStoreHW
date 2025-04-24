@@ -29,6 +29,8 @@ namespace S0IPAF
 
         private void fájlBetöltéseToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.openFileDialog1.FileName = "nfl_shop_data_file.txt";
+            this.openFileDialog1.InitialDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory + "Res\\Files");
             this.openFileDialog1.Filter =
             "Text (*.txt)|*.txt|" + "All files (*.*)|*.*";
             if (openFileDialog1.ShowDialog() != DialogResult.OK) return;

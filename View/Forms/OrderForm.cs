@@ -61,6 +61,7 @@ namespace S0IPAF
         {
             if (CheckErrors())
             {
+                int debug = 0;
                 foreach (Control control in ItemsTable.Controls)
                 {
                     if (control is JerseyControl jerseyControl)
@@ -78,37 +79,31 @@ namespace S0IPAF
                     }
                 }
                 accounting.NumberOfPurchases++;
+                this.Close();
             }
             else
             {
-                MessageBox.Show("Kérjük, ellenőrizze a hibákat a rendelés leadása előtt.");
+                MessageBox.Show("Kérjük, ellenőriintzze a hibákat a rendelés leadása előtt.");
+                return;
             }
-            this.Close();
         }
 
         public bool CheckErrors()
         {
-            bool noErrors = false;
+            bool noErrors = true;
             foreach (Control control in ItemsTable.Controls)
             {
                 if (control is JerseyControl jerseyControl)
                 {
                     if (jerseyControl.checkBoxBuy.Checked)
                     {
-                        noErrors = true;
-                        if (string.IsNullOrEmpty(jerseyControl.textBoxCount.Text))
+                        if (jerseyControl.textBoxCount.Text == null || !int.TryParse(jerseyControl.textBoxCount.Text,out int parsedValue) || parsedValue <= 0 )
                         {
-                            MessageBox.Show("Kérjük, adja meg a darabszámot.");
-                            control.BackColor = Color.Red;
-                            return noErrors;
-                        }
-                        if (!int.TryParse(jerseyControl.textBoxCount.Text, out int count) || count <= 0)
-                        {
-                            MessageBox.Show("Kérjük, érvényes darabszámot adjon meg.");
-                            control.BackColor = Color.Red;
-                            return noErrors;
+                            jerseyControl.textBoxCount.BackColor = Color.Red;
+                            noErrors = false;
                         }
                     }
+                    jerseyControl.textBoxCount.BackColor = Color.White;
                 }
             }
             return noErrors;

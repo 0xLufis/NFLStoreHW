@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -50,55 +65,56 @@
     <Compile Include="Model\Accounting\SaleItem.cs" />
     <Compile Include="Model\Jersey\IJerseyParser.cs" />
     <Compile Include="Model\Jersey\TxtJerseyParser.cs" />
-    <Compile Include="View\JerseyControl.cs">
+    <Compile Include="Settings.cs" />
+    <Compile Include="View\Controls\JerseyControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\JerseyControl.Designer.cs">
+    <Compile Include="View\Controls\JerseyControl.Designer.cs">
       <DependentUpon>JerseyControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Konyveles.cs">
+    <Compile Include="View\Forms\Konyveles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Konyveles.Designer.cs">
+    <Compile Include="View\Forms\Konyveles.Designer.cs">
       <DependentUpon>Konyveles.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\MainForm.cs">
+    <Compile Include="View\Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\MainForm.Designer.cs">
+    <Compile Include="View\Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Util\IParser.cs" />
     <Compile Include="Model\Jersey\Jersey.cs" />
     <Compile Include="Model\Jersey\JerseyStorage.cs" />
     <Compile Include="Model\Jersey\JerseyStorageEnumerator.cs" />
-    <Compile Include="View\Nevjegy.cs">
+    <Compile Include="View\Forms\Nevjegy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Nevjegy.Designer.cs">
+    <Compile Include="View\Forms\Nevjegy.Designer.cs">
       <DependentUpon>Nevjegy.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\OrderForm.cs">
+    <Compile Include="View\Forms\OrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\OrderForm.Designer.cs">
+    <Compile Include="View\Forms\OrderForm.Designer.cs">
       <DependentUpon>OrderForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="View\JerseyControl.resx">
+    <EmbeddedResource Include="View\Controls\JerseyControl.resx">
       <DependentUpon>JerseyControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Konyveles.resx">
+    <EmbeddedResource Include="View\Forms\Konyveles.resx">
       <DependentUpon>Konyveles.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\MainForm.resx">
+    <EmbeddedResource Include="View\Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Nevjegy.resx">
+    <EmbeddedResource Include="View\Forms\Nevjegy.resx">
       <DependentUpon>Nevjegy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\OrderForm.resx">
+    <EmbeddedResource Include="View\Forms\OrderForm.resx">
       <DependentUpon>OrderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -109,6 +125,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -123,6 +140,37 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Res\Files\nfl_shop_data_file.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Res\Images\Kittle85.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Res\Images\Mahomes15.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Res\Images\Mayfield6.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Res\Images\shield.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Res\Images\Thomas13.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

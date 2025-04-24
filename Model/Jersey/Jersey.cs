@@ -13,17 +13,17 @@ namespace S0IPAF.Model.Jersey
 {
     class Jersey
     {
-        string imagesFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images");
-        
+        string imagesFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Res\\Images");
         internal int ID { get; }
         internal string TeamName { get; }
         internal string PlayerName { get;}
         internal int PlayerNumber { get; }
+
         internal string Size { get; }
         internal float BulkPrice { get; }
         internal float RetailPrice { get; }
         internal string ImageName { get; }
-        internal Image ImageObject { get; }
+        internal Bitmap ImageObject { get; }
         internal int Amount  { get; set; }
 
         public Jersey(string teamName, string playerName, int playerNumber, string size, float bulkPrice, float retailPrice, string imageName) 
@@ -40,17 +40,36 @@ namespace S0IPAF.Model.Jersey
             this.ID = GetHashCode();
         }
 
-        private Image GetImageObject(string imageName)
+        private Bitmap GetImageObject(string imageName)
         {
-            string imagePath = Path.Combine(imagesFolder, imageName);
-
-            if (!File.Exists(imagePath))
+            try
             {
-                MessageBox.Show($"Fájl nem található: {imagePath}");
-                return null;
+                // Check if the image exists in the resources -- Not used
+                /*
+                  if ( Properties.Resources.ResourceManager.GetObject(imageName) is Bitmap bitmap)
+                  {
+                      return bitmap;
+                  }
+                */
+                // Check if the image exists in the images folder
+                string imagePath = Path.Combine(imagesFolder, imageName);
+                if (File.Exists(imagePath))
+                {
+                    Bitmap image = new Bitmap(imagePath);
+                    return image;
+                }
+                // If the image is not found, throw an exception
+                throw new Exception("File does not exist: " + imagePath);
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("No such image: " + imageName + "Excetpion: " + ex.Message);
             }
 
-            return Image.FromFile(imagePath);
+
         }
 
         internal float GetSubtotalPrice(int amount)
