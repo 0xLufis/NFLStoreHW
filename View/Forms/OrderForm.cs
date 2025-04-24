@@ -99,7 +99,7 @@ namespace S0IPAF
                     {
                         if (jerseyControl.textBoxCount.Text == null || !int.TryParse(jerseyControl.textBoxCount.Text,out int parsedValue) || parsedValue <= 0 )
                         {
-                            jerseyControl.textBoxCount.BackColor = Color.Red;
+                            jerseyControl.textBoxCount.BackColor = Color.IndianRed;
                             noErrors = false;
                         }
                     }

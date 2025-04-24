@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace S0IPAF.View
 {
-    public partial class Konyveles: Form
+    public partial class KonyvelesForm: Form
     {
         internal Accounting accounting;
-        internal Konyveles(Accounting accountingIn)
+        internal KonyvelesForm(Accounting accountingIn)
         {
             InitializeComponent();
             this.accounting = accountingIn;

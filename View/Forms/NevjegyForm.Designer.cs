@@ -1,6 +1,6 @@
 ﻿namespace S0IPAF.View
 {
-    partial class Nevjegy
+    partial class NevjegyForm
     {
         /// <summary>
         /// Required designer variable.
@@ -51,7 +51,7 @@
             this.labelNeptun.TabIndex = 1;
             this.labelNeptun.Text = "S0IPAF";
             // 
-            // Nevjegy
+            // NevjegyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -59,7 +59,8 @@
             this.Controls.Add(this.labelNeptun);
             this.Controls.Add(this.labelDateTime);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "Nevjegy";
+            this.MaximizeBox = false;
+            this.Name = "NevjegyForm";
             this.Text = "Névjegy";
             this.ResumeLayout(false);
             this.PerformLayout();

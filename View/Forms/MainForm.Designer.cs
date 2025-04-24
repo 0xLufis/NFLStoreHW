@@ -111,6 +111,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "NFL Shop";
             this.Load += new System.EventHandler(this.MainForm_Load);

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace S0IPAF.View
 {
-    public partial class Nevjegy: Form
+    public partial class NevjegyForm: Form
     {
-        public Nevjegy()
+        public NevjegyForm()
         {
             InitializeComponent();
             this.labelDateTime.Text = System.DateTime.Now.ToLongDateString();

@@ -70,13 +70,13 @@ namespace S0IPAF
 
         private void kömyvelésToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Konyveles konyveles = new Konyveles(accounting);
+            KonyvelesForm konyveles = new KonyvelesForm(accounting);
             konyveles.Show();
         }
 
         private void névjegyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Nevjegy nevjegy = new Nevjegy();
+            NevjegyForm nevjegy = new NevjegyForm();
             nevjegy.Show();
         }
 

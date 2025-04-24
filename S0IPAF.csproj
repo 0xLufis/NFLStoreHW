@@ -72,11 +72,11 @@
     <Compile Include="View\Controls\JerseyControl.Designer.cs">
       <DependentUpon>JerseyControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Forms\Konyveles.cs">
+    <Compile Include="View\Forms\KonyvelesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Forms\Konyveles.Designer.cs">
-      <DependentUpon>Konyveles.cs</DependentUpon>
+    <Compile Include="View\Forms\KonyvelesForm.Designer.cs">
+      <DependentUpon>KonyvelesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Forms\MainForm.cs">
       <SubType>Form</SubType>
@@ -88,11 +88,11 @@
     <Compile Include="Model\Jersey\Jersey.cs" />
     <Compile Include="Model\Jersey\JerseyStorage.cs" />
     <Compile Include="Model\Jersey\JerseyStorageEnumerator.cs" />
-    <Compile Include="View\Forms\Nevjegy.cs">
+    <Compile Include="View\Forms\NevjegyForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Forms\Nevjegy.Designer.cs">
-      <DependentUpon>Nevjegy.cs</DependentUpon>
+    <Compile Include="View\Forms\NevjegyForm.Designer.cs">
+      <DependentUpon>NevjegyForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Forms\OrderForm.cs">
       <SubType>Form</SubType>
@@ -105,14 +105,14 @@
     <EmbeddedResource Include="View\Controls\JerseyControl.resx">
       <DependentUpon>JerseyControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Forms\Konyveles.resx">
-      <DependentUpon>Konyveles.cs</DependentUpon>
+    <EmbeddedResource Include="View\Forms\KonyvelesForm.resx">
+      <DependentUpon>KonyvelesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Forms\Nevjegy.resx">
-      <DependentUpon>Nevjegy.cs</DependentUpon>
+    <EmbeddedResource Include="View\Forms\NevjegyForm.resx">
+      <DependentUpon>NevjegyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\OrderForm.resx">
       <DependentUpon>OrderForm.cs</DependentUpon>

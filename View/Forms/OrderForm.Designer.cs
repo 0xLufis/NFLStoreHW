@@ -100,6 +100,7 @@
             this.Controls.Add(this.ItemsTable);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
             this.Name = "OrderForm";
             this.Text = "Rendelés";
             this.Load += new System.EventHandler(this.OrderForm_Load);

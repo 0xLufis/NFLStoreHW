@@ -1,6 +1,6 @@
 ﻿namespace S0IPAF.View
 {
-    partial class Konyveles
+    partial class KonyvelesForm
     {
         /// <summary>
         /// Required designer variable.
@@ -125,7 +125,7 @@
             this.labelProfit.TabIndex = 7;
             this.labelProfit.Text = "0 db";
             // 
-            // Konyveles
+            // KonyvelesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -139,7 +139,8 @@
             this.Controls.Add(this.labelCost);
             this.Controls.Add(this.labelNoPurcheses);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "Konyveles";
+            this.MaximizeBox = false;
+            this.Name = "KonyvelesForm";
             this.Text = "Konyveles";
             this.ResumeLayout(false);
             this.PerformLayout();
